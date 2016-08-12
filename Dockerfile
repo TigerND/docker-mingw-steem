@@ -16,7 +16,7 @@ RUN ( \
     ) &&\
     apt-get clean -qy
     
-ENV STEEM_VERSION 0.12.3a
+ENV STEEM_VERSION 0.12.2
 
 RUN figlet "Steem" &&\
     mkdir -p $BUILDBASE/dist/steem-v$STEEM_VERSION-mingw64 &&\
