@@ -11,6 +11,8 @@ ENV MINGWROOT $BUILDBASE/mingw
 RUN ( \
         apt-get install -qy --no-install-recommends \
             cmake \
+            python3 \
+            doxygen \
     ) &&\
     apt-get clean -qy
     
