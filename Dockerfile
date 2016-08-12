@@ -8,6 +8,12 @@ ENV BUILDBASE /r
 ENV BUILDROOT $BUILDBASE/build
 ENV MINGWROOT $BUILDBASE/mingw
 
+RUN ( \
+        apt-get install -qy --no-install-recommends \
+            cmake \
+    ) &&\
+    apt-get clean -qy
+    
 ENV STEEM_VERSION 0.12.3a
 
 RUN figlet "Steem" &&\
