@@ -16,7 +16,8 @@ RUN ( \
     ) &&\
     apt-get clean -qy
     
-ENV STEEM_VERSION 0.12.2
+ENV STEEM_VERSION 0.13.0
+ENV STEEM_RELEASE $STEEM_VERSION-rc3
 
 RUN figlet "Steem" &&\
     mkdir -p $BUILDBASE/dist/steem-v$STEEM_VERSION-mingw64 &&\
@@ -26,7 +27,7 @@ RUN figlet "Steem" &&\
             git clone https://github.com/steemit/steem.git steem-src &&\
             cd steem-src ;\
             ( \
-                git checkout v$STEEM_VERSION &&\
+                git checkout $STEEM_RELEASE &&\
                 git submodule update --init --recursive \
             ) \
         ) \
