@@ -16,7 +16,7 @@ RUN ( \
     ) &&\
     apt-get clean -qy
     
-ENV STEEM_VERSION 0.14.0
+ENV STEEM_VERSION 0.14.2
 ENV STEEM_RELEASE v$STEEM_VERSION
 
 RUN figlet "Steem" &&\
